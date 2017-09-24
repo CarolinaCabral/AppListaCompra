@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/statusBarColor"
+
+    android:backgroundTint="?android:attr/statusBarColor"
+    android:orientation="vertical"
+    tools:context="com.example.carolinacabral.listacompra.NewActivity">
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btnSave"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/btnSave"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/darker_gray"
+        android:padding="5dp"
+        android:paddingBottom="5dp"
+        android:paddingEnd="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingStart="5dp"
+        android:paddingTop="5dp"
+        android:text="txtProduct"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <EditText
+        android:id="@+id/edtProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtProduct"
+        android:layout_alignBottom="@+id/txtProduct"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/txtQuantity"
+        android:layout_toRightOf="@+id/txtQuantity"
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:hint="Digite aqui"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/txtProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtQuantity"
+        android:layout_alignStart="@+id/txtQuantity"
+        android:layout_below="@+id/txtResult"
+        android:layout_marginTop="41dp"
+        android:text="PRODUTO:"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SALVAR"
+        android:layout_below="@+id/rgCategory"
+        android:layout_toRightOf="@+id/rgOpcions"
+        android:layout_toEndOf="@+id/rgOpcions"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/txtQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/rgOpcions"
+        android:layout_alignRight="@+id/rgOpcions"
+        android:layout_below="@+id/edtProduct"
+        android:layout_marginTop="17dp"
+        android:text="QUANTIDADE:"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtQuantity"
+        android:layout_alignBottom="@+id/txtQuantity"
+        android:layout_alignEnd="@+id/textView11"
+        android:layout_alignLeft="@+id/edtProduct"
+        android:layout_alignRight="@+id/textView11"
+        android:layout_alignStart="@+id/edtProduct"
+        android:layout_toStartOf="@+id/textView12"
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingBottom="5dp"
+        android:paddingEnd="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingStart="5dp" />
+
+    <GridView
+        android:id="@+id/gridId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnSave"
+        android:layout_marginTop="89dp"
+        android:layout_toEndOf="@+id/txtQuantity"
+        android:columnWidth="4dp"
+        android:numColumns="4" />
+
+    <TextView
+        android:id="@+id/txtPoison"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/edtQuantity"
+        android:layout_marginLeft="46dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="26dp"
+        android:text="PERECÍVEL:"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rgOpcions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtPoison"
+        android:layout_alignStart="@+id/txtPoison"
+        android:layout_below="@+id/txtPoison"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/background_light">
+
+        <RadioButton
+            android:id="@+id/rbOpYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/rbOpYes"
+            android:layout_alignBottom="@+id/rbOpYes"
+            android:layout_alignEnd="@+id/txtResult"
+            android:layout_alignRight="@+id/txtResult"
+            android:layout_weight="1"
+            android:text="SIM" />
+
+        <RadioButton
+            android:id="@+id/rbOpNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtPoison"
+            android:layout_alignBottom="@+id/txtPoison"
+            android:layout_alignLeft="@+id/edtQuantity"
+            android:layout_alignStart="@+id/edtQuantity"
+            android:layout_weight="1"
+            android:text="NÃO" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtPoison"
+        android:layout_alignBottom="@+id/txtPoison"
+        android:layout_alignLeft="@+id/rgCategory"
+        android:layout_alignStart="@+id/rgCategory"
+        android:text="CATEGORIA:"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rgCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/rgOpcions"
+        android:layout_toEndOf="@+id/textView10"
+        android:layout_toRightOf="@+id/textView10"
+        android:background="@android:color/background_light">
+
+        <RadioButton
+            android:id="@+id/rbSupermarket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SUPERMERCADO" />
+
+        <RadioButton
+            android:id="@+id/rbpharmacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="FARMÁCIA" />
+
+        <RadioButton
+            android:id="@+id/rbBakery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="PADARIA" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:text="Produto"
+        android:textColor="@android:color/darker_gray"
+        android:layout_below="@+id/btnSave"
+        android:layout_alignRight="@+id/txtProduct"
+        android:layout_alignEnd="@+id/txtProduct" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView9"
+        android:layout_alignLeft="@+id/btnSave"
+        android:layout_alignStart="@+id/btnSave"
+        android:text="Quantidade"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView10"
+        android:layout_alignBottom="@+id/textView10"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_toEndOf="@+id/btnSave"
+        android:layout_toRightOf="@+id/btnSave"
+        android:text="Perecível"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categoria"
+        android:textColor="@android:color/darker_gray"
+        android:layout_alignBaseline="@+id/textView11"
+        android:layout_alignBottom="@+id/textView11"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="21dp"
+        android:layout_marginEnd="21dp" />
+
+</RelativeLayout>

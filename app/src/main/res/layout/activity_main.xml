@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/statusBarColor"
+    tools:context="com.example.carolinacabral.listacompra.MainActivity">
+
+    <EditText
+        android:id="@+id/edtList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:background="@android:color/background_light"
+        android:ems="10"
+        android:hint="Nome da lista"
+        android:inputType="textPersonName"
+        android:paddingEnd="2dp"
+        android:paddingRight="50dp"
+        android:layout_above="@+id/btnAdd"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="82dp" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADICIONAR"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/edtList"
+        android:layout_alignStart="@+id/edtList"
+        android:layout_marginLeft="45dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="166dp" />
+
+</RelativeLayout>
